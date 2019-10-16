@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+
+<!-- Meta Tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+<link href="css/css-plugin-collections.css" rel="stylesheet"/>
+
+<!-- CSS | menuzord megamenu skins -->
+<link id="menuzord-menu-skins" href="css/menuzord-skins/menuzord-rounded-boxed.css" rel="stylesheet"/>
+<!-- CSS | Main style file -->
+<link href="css/style-main.css" rel="stylesheet" type="text/css">
+<!-- CSS | Preloader Styles -->
+<link href="css/preloader.css" rel="stylesheet" type="text/css">
+<!-- CSS | Custom Margin Padding Collection -->
+<link href="css/custom-bootstrap-margin-padding.css" rel="stylesheet" type="text/css">
+<!-- CSS | Responsive media queries -->
+<link href="css/responsive.css" rel="stylesheet" type="text/css">
+<!-- CSS | Style css. This is the file where you can place your own custom css code. Just uncomment it and use it. -->
+<!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+<!-- CSS | Theme Color -->
+<link href="css/colors/theme-skin-color-set-1.css" rel="stylesheet" type="text/css">
+<!-- external javascripts -->
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- JS | jquery plugin collection for this theme -->
+<script src="js/jquery-plugin-collection.js"></script>
+<style>
+.test.active {
+      position: fixed;
+      top: 36px;
+      z-index: 100;
+      left: 50%;
+      margin-left: -280px;
+    }
+
+    .test {
+
+      z-index: 100;
+      max-width: 700px;
+      border-radius: 8px;
+      -webkit-box-shadow: 0 13px 38px 0 rgba(45, 31, 80, 0.27);
+      box-shadow: 0 13px 38px 0 rgba(45, 31, 80, 0.27);
+      background-color: white;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 4px;
+      height: 60px;
+      -webkit-transition: visibility 0.3s, opacity 0.3s ease;
+      transition: visibility 0.3s, opacity 0.3s ease;
+      opacity: 1;
+    }
+
+    .test1 {
+      z-index: 100;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: #acacac;
+      padding: 0 36px;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+   
+   .back{ height: 100vh;
+  min-height: 500px;
+  background-image: url('images/python2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+  .back1{ height: 100vh;
+  min-height: 500px;
+
+
+  }
+    .test1.active {
+      font-weight: bold;
+      color: #ffffff;
+      border-radius: 8px;
+      background-image: linear-gradient(120deg, #f7415f, #fe734e);
+    }
+  .multiscroll-slider-responsive {
+    display: none;
+  }
+  #multiscroll-nav {
+      position: fixed;
+      z-index: 100;
+      margin-top: -32px;
+      top: 50%;
+      opacity: 1;
+  }
+  #multiscroll-nav.right {
+      right: 17px;
+  }
+  #multiscroll-nav.left {
+      left: 17px;
+  }
+  #multiscroll-nav ul{
+    margin: 0;
+    padding: 0;
+  }
+  #multiscroll-nav li{
+      display: block;
+      width: 14px;
+      height: 13px;
+      margin: 7px;
+      position:relative;
+  }
+  #multiscroll-nav li a{
+      display: block;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      text-decoration: none;
+  }
+  #multiscroll-nav li .active span{
+      background: #333;
+  }
+  #multiscroll-nav span{
+      top: 2px;
+      left: 2px;
+      width: 8px;
+      height: 8px;
+      border: 1px solid #000;
+      background: rgba(0, 0, 0, 0);
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 1;
+  }
+  .multiscroll-tooltip {
+      position: absolute;
+      color: #fff;
+      font-size: 14px;
+      font-family: arial, helvetica, sans-serif;
+      top: -2px;
+      white-space: nowrap;
+      max-width: 220px;
+  }
+  .multiscroll-tooltip.right {
+      right: 20px;
+  }
+  .multiscroll-tooltip.left {
+      left: 20px;
+  }
+  @media only screen and (max-width: 1000px) {
+    html, body {
+      overflow: auto !important;
+    }
+    .multiscroll-slider {
+      display: none;
+    }
+    .multiscroll-slider-responsive {
+      display: block;
+    }
+    .multiscroll-slider-responsive section {
+      height: auto !important;
+      min-height: 400px !important;
+    }
+    #multiscroll-nav {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6 back ">
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6 back1">
+  
+   
+        <!-- Section: home -->
+        <section id="home" style="padding-top: 100px;" class="fullscreen ">
+          <div class="display-table">
+            <div class="display-table-cell">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-10">
+                    <div class="pl-50 pl-sm-0 mt-sm-50">
+                      <h1 class="text-theme-colored text-uppercase font-playfair font-weight-600 font-78 line-height-1 m-0">study<span class="text-theme-color-2">press</span></h1>
+                      <h2 class="font-playfair font-42 text-black-333 font-weight-400 m-0">Education & University</h2>
+                      <p class="text-black-333 font-weight-200 font-18 mt-10">Every day we bring hope to millions of children in the world's <br>hardest places as a sign of God's unconditional love.</p>
+                      <a href="#donate-now" class="btn btn-theme-colored btn-circled btn-lg smooth-scroll-to-target mt-10">Read More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+     
+      
+    </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        
+          <section class="fullscreen">
+          <div class="display-table">
+              <div class="display-table-cell">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                      <h6 class="letter-space-4 text-theme-color-2 font-weight-600 text-uppercase mt-0 mb-0">Python
+                        Data Science And Machine Learning</h6>
+                      <h2 class="text-uppercase font-weight-700 mt-0 font-28 line-bottom">Program Key Features</h2>
+                      <div class="row">
+                        <div class="col">
+                          <div class="icon-box p-0 mb-20">
+                            <a class="icon bg-theme-color-2 icon-circled icon-border-effect effect-circle icon-sm pull-left sm-pull-none flip"
+                              href="#">
+                              <i class="pe-7s-pen text-white"></i>
+                            </a>
+                            <div class="ml-70 ml-sm-0">
+                              <h4 class="icon-box-title mt-10 text-uppercase letter-space-2 mb-10">Top Skills You Will
+                                Learn</h4>
+                              <p class="text-gray">Statistics, Predictive Analytics using Python, Machine Learning,
+                                Data Visualization.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="icon-box p-0 mb-20">
+                            <a class="icon bg-theme-color-2 icon-circled icon-border-effect effect-circle icon-sm pull-left sm-pull-none flip"
+                              href="#">
+                              <i class="pe-7s-pen text-white"></i>
+                            </a>
+                            <div class="ml-70 ml-sm-0">
+                              <h4 class="icon-box-title mt-10 text-uppercase letter-space-2 mb-10">Job Opportunities
+                              </h4>
+                              <p class="text-gray">Data Analyst, Data Scientist, Product Analyst, Machine Learning
+                                Engineer, Business Analyst.</p>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="icon-box p-0 mb-20">
+                              <a class="icon bg-theme-color-2 icon-circled icon-border-effect effect-circle icon-sm pull-left sm-pull-none flip"
+                                href="#">
+                                <i class="pe-7s-pen text-white"></i>
+                              </a>
+                              <div class="ml-70 ml-sm-0">
+                                <h4 class="icon-box-title mt-10 text-uppercase letter-space-2 mb-10">Who Is This
+                                  Program For?</h4>
+                                <p class="text-gray">Engineers, Software and IT Professionals, Marketing and Sales
+                                  Professionals, Managers.</p>
+                              </div>
+                            </div>
+                          </div>
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-6 back1">
+    
+          <section id="home" class="fullscreen">
+              <div class="row"  style="padding: 130px 0px 0px 40px;">
+                <div class="col">
+                  <div class="heading-line-bottom">
+                      <h2 class="mt-0 text-uppercase line-bottom mt-sm-30"><strong></strong> <span class="text-theme-color-2">Syllabus</span></h2>
+                  </div>
+               
+          <div id="accordion1" class="panel-group accordion ">
+              <div class="panel">
+                <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="#accordion11" class="collapsed" aria-expanded="true"> <span class="open-sub"></span> Python Essentials </a>
+                </div>
+           
+                <div id="accordion11" class="collapse " role="tablist" aria-expanded="true" >
+                  <div class="panel-content ">
+                    <p>An understanding of how to use the Python standard library to write programs, access various tools, and document and automate analytical processes..</p>
+             
+                      - Types (strings, lists, dictionaries, and more)
+                      - Control Flow (if-then statements, looping)
+                      - Organizing code (functions, modules, packages)
+                      - Reading and writing files
+                      - Overview of Object-Oriented Programming (OOP)
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel">
+                  <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="#accordion11" class="collapsed" aria-expanded="true"> <span class="open-sub"></span> Python Essentials </a>
+                  </div>
+             
+                  <div id="accordion11" class="collapse " role="tablist" aria-expanded="true" >
+                    <div class="panel-content ">
+                      <p>An understanding of how to use the Python standard library to write programs, access various tools, and document and automate analytical processes..</p>
+               
+                        - Types (strings, lists, dictionaries, and more)
+                        - Control Flow (if-then statements, looping)
+                        - Organizing code (functions, modules, packages)
+                        - Reading and writing files
+                        - Overview of Object-Oriented Programming (OOP)
+                    </div>
+                  </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="#accordion11" class="collapsed" aria-expanded="true"> <span class="open-sub"></span> Python Essentials </a>
+                    </div>
+               
+                    <div id="accordion11" class="collapse " role="tablist" aria-expanded="true" >
+                      <div class="panel-content ">
+                        <p>An understanding of how to use the Python standard library to write programs, access various tools, and document and automate analytical processes..</p>
+                 
+                          - Types (strings, lists, dictionaries, and more)
+                          - Control Flow (if-then statements, looping)
+                          - Organizing code (functions, modules, packages)
+                          - Reading and writing files
+                          - Overview of Object-Oriented Programming (OOP)
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel">
+                      <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="#accordion11" class="collapsed" aria-expanded="true"> <span class="open-sub"></span> Python Essentials </a>
+                      </div>
+                 
+                      <div id="accordion11" class="collapse " role="tablist" aria-expanded="true" >
+                        <div class="panel-content ">
+                          <p>An understanding of how to use the Python standard library to write programs, access various tools, and document and automate analytical processes..</p>
+                   
+                            - Types (strings, lists, dictionaries, and more)
+                            - Control Flow (if-then statements, looping)
+                            - Organizing code (functions, modules, packages)
+                            - Reading and writing files
+                            - Overview of Object-Oriented Programming (OOP)
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="#accordion11" class="collapsed" aria-expanded="true"> <span class="open-sub"></span> Python Essentials </a>
+                        </div>
+                   
+                        <div id="accordion11" class="collapse " role="tablist" aria-expanded="true" >
+                          <div class="panel-content ">
+                            <p>An understanding of how to use the Python standard library to write programs, access various tools, and document and automate analytical processes..</p>
+                     
+                              - Types (strings, lists, dictionaries, and more)
+                              - Control Flow (if-then statements, looping)
+                              - Organizing code (functions, modules, packages)
+                              - Reading and writing files
+                              - Overview of Object-Oriented Programming (OOP)
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel">
+                          <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="#accordion11" class="collapsed" aria-expanded="true"> <span class="open-sub"></span> Python Essentials </a>
+                          </div>
+                     
+                          <div id="accordion11" class="collapse " role="tablist" aria-expanded="true" >
+                            <div class="panel-content ">
+                              <p>An understanding of how to use the Python standard library to write programs, access various tools, and document and automate analytical processes..</p>
+                       
+                                - Types (strings, lists, dictionaries, and more)
+                                - Control Flow (if-then statements, looping)
+                                - Organizing code (functions, modules, packages)
+                                - Reading and writing files
+                                - Overview of Object-Oriented Programming (OOP)
+                            </div>
+                          </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="#accordion11" class="collapsed" aria-expanded="true"> <span class="open-sub"></span> Python Essentials </a>
+                            </div>
+                       
+                            <div id="accordion11" class="collapse " role="tablist" aria-expanded="true" >
+                              <div class="panel-content ">
+                                <p>An understanding of how to use the Python standard library to write programs, access various tools, and document and automate analytical processes..</p>
+                         
+                                  - Types (strings, lists, dictionaries, and more)
+                                  - Control Flow (if-then statements, looping)
+                                  - Organizing code (functions, modules, packages)
+                                  - Reading and writing files
+                                  - Overview of Object-Oriented Programming (OOP)
+                              </div>
+                            </div>
+                          </div>
+                          
+             </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
